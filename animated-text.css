@@ -1,0 +1,43 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    margin: 200px 0;
+    font-size: 10em;
+    text-align: center;
+    padding: 0;
+    position: relative;
+    color: cornflowerblue;
+    text-transform: uppercase;
+}
+h1:before {
+    content: "Water";
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25%;
+    width: 100%;
+    overflow: hidden;
+    animation: animate 5s infinite linear;
+    text-shadow: 0 0 1px deepskyblue;
+}
+@keyframes animate {
+    0% {
+        height: 25%;
+    }
+    25% {
+        height: 50%;
+    }
+    50% {
+        height: 30%;
+    }
+    75% {
+        height: 70%;
+    }
+    100% {
+        height: 25%;
+    }
+}
