@@ -48,10 +48,10 @@ img {
     width: 200px;
     height: 200px;
     background: red;
-    transform: rotate(45deg) scale(1);
+    transform: rotate(45deg);
     margin: 100px auto;
     position: relative;
-    animation: bum 1.8s infinite
+    animation: bum 1.8s infinite;
 }
 .heart:after {
     content: '';
