@@ -1,0 +1,100 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    background: yellowgreen;
+}
+
+.content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+a {
+    text-transform: uppercase;
+    text-decoration: none;
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    display: inline-block;
+    font: bold 40px/100px Arial;
+    position: relative;
+    box-sizing: border-box;
+}
+
+a::before, a::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    height: 100%;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    border: 5px solid transparent;
+}
+
+a:hover:before {
+    animation: animate 2s linear forwards;
+}
+
+@keyframes animate {
+    0% {
+        width: 0;
+        height: 0;
+        border-top-color: #262626;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+    50% {
+        width: 100%;
+        height: 0;
+        border-top-color: #262626;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+     100% {
+        width: 100%;
+        height: 100%;
+        border-top-color: #262626;
+        border-right-color: #262626;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+}
+
+a:hover:after {
+    animation: animate2 2s linear forwards;
+    animation-delay: 2s;
+}
+
+@keyframes animate2 {
+    0% {
+        width: 0;
+        height: 0;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+    50% {
+        width: 0;
+        height: 100%;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: #262626;
+    }
+     100% {
+        width: 100%;
+        height: 100%;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: #262626;
+        border-left-color: #262626;
+    }
+
+}
