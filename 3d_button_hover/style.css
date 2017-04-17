@@ -1,0 +1,90 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    transition: .5;    
+}
+
+span {
+    padding: 20px;
+    font-size: 25px;
+    position: relative;
+}
+
+span:nth-child(1) {
+    background: darkblue;
+}
+
+span:nth-child(2) {
+    background: darkorange;
+}
+
+span:nth-child(1):after {
+    content: attr(data-attr);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: darkorange;
+    padding: 20px;
+    transform-origin: top;
+    transform: rotateX(90deg) translateY(-50%);
+    transition: .5s;
+}
+a:hover span:nth-child(1):after {
+    transform: rotateX(0) translateY(0);
+}
+span:nth-child(1):before {
+    content: attr(data-attr);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: darkblue;
+    padding: 20px;
+    transform-origin: bottom;
+    transform: rotateX(0deg) translateY(0);
+    transition: .5s;
+}
+a:hover span:nth-child(1):before {
+    transform: rotateX(90deg) translateY(50%);
+}
+
+
+span:nth-child(2):after {
+    content: attr(data-attr);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: darkorange;
+    padding: 20px;
+    transform-origin: top;
+    transform: rotateX(0) translateY(0);
+    transition: .5s;
+}
+a:hover span:nth-child(2):after {
+    transform: rotateX(90deg) translateY(50%);
+}
+span:nth-child(2):before {
+    content: attr(data-attr);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: darkblue;
+    padding: 20px;
+    transform-origin: bottom;
+    transform: rotateX(90deg) translateY(50%);
+    transition: .5s;
+}
+a:hover span:nth-child(2):before {
+    transform: rotateX(0) translateY(0);
+}
